@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const jwt = require("jsonwebtoken");
 const secretKey = "Shhh";
 
-const { nuevoUsuario, getUsuarios, getUsuario, setUsuarioStatus, setDatosUsuario,
+const { nuevoUsuario, getUsuarios, getUsuario, setUsuarioStatus,
     eliminarUsuario } = require("./consultas")
 
 //server
@@ -132,25 +132,6 @@ app.get("/Registro", function (req, res) {
             : res.render("Registro", { nombre, email });
     });
 });
-
-// app.post("/upload", (req, res) => {
-//     if (Object.keys(req.files).lenght == 0) {
-//         return res.status(400).send("No se encontró el archivo");
-//     }
-//     const { files } = req
-//     const { foto } = files;
-//     const { name } = foto;
-//     const { email, nombre } = req.body
-//     console.log(email);
-//     foto.mv(`${__dirname}/public/img/${name}.jpg`, async (err) => {
-//         if (err) return res.status(500).send({
-//             error: `Algo saliò mal...${err}`,
-//             code: 500
-//         })
-//         await send(email, nombre)
-//         res.send("Foto subida con éxito");
-//     });
-// });
 
 
 app.delete('/eliminar_usuario/:email', async (req, res) => {
