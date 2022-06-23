@@ -33,7 +33,7 @@
     try {
       const { data: token } = await axios.post('/verify', payload)
       alert('Autentificación y autorización exitosa')
-      windows.location.href = `/Admin?token=${token}`
+      window.location.href = `/Admin?token=${token}`
     }
   catch ({ response }) {
     const { data } = response

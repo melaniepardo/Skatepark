@@ -10,3 +10,5 @@ CREATE TABLE skaters (
     foto VARCHAR(255) NOT NULL,
     estado BOOLEAN NOT NULL
 );
+
+INSERT INTO skaters (email, nombre, password, anios_experiencia, especialidad, foto, estado) VALUES ('aprobado@gmail.com', 'Camila', '123', 1, 'flotar', 'img.jpg', true);

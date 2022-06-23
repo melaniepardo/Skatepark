@@ -5,7 +5,7 @@
     <hr class="w-50" />
 
     <form>
-        <div class="form-group row w-50 m-auto">
+        <div id="form" class="form-group row w-50 m-auto">
             <div class="form-group col-12 col-sm-6">
                 <label>Email</label>
                 <input class="form-control m-auto" />
@@ -30,7 +30,7 @@
                 <label>Especialidad</label>
                 <input class="form-control m-auto" />
             </div>
-            <div class="form-group col-12 col-sm-12">
+            <div id="foto" class="form-group col-12 col-sm-12">
                 <label>Foto de perfil</label>
                 <input type="file" />
             </div>
@@ -85,10 +85,10 @@
                 })
 
                     .then(() => {
-                         axios.post('http://localhost:3000/subir_foto')
+                        axios.post('http://localhost:3000/subir_foto')
                     });
                 alert('Usuario registrado con éxito')
-                 window.location.href = '/login'
+                window.location.href = '/login'
             } catch (error) {
                 // const { data } = response
                 //const { error } = data
